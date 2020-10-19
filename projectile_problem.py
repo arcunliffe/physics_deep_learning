@@ -41,7 +41,7 @@ def hyperparameter_combinations(hyperparameters):
 
 
 def train_mlpregressor(model_hyperparams, loss_function, data, display_loss):
-    """hHlper function to train the MLPRegressor model with a set of model
+    """helper function to train the MLPRegressor model with a set of model
        hyperparameters using Adam optimization."""
     model = MLPRegressor(model_hyperparams["layer_sizes"])
     optimizer = optim.Adam(model.parameters(), lr=model_hyperparams["learning_rate"])
