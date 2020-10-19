@@ -52,15 +52,15 @@ def train_test_split(x, y, train_fraction):
     """
        Randomly split data into training & testing set.
        Inputs:
-          x: np.array, input feature vector
-          y: np.array, output vector to predict
+          x: np.array or torch.Tensor, input feature vector
+          y: np.array or torch.Tensor, output vector to predict
           train_fraction: float, number between 0 and 1 that specifies the
              proportion of the data that should be included in the training set
        Outputs:
-          x_train: np.array, input feature vector for training set
-          y_train: np.array, output vector to predict for training set
-          x_test: np.array, input feature vector for test set
-          y_test: np.array, output vector to predict for test set
+          x_train: np.array or torch.Tensor, input feature vector for training set
+          y_train: np.array or torch.Tensor, output vector to predict for training set
+          x_test: np.array or torch.Tensor, input feature vector for test set
+          y_test: np.array or torch.Tensor, output vector to predict for test set
     """
 
     n_samples = x.shape[0]
