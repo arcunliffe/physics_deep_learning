@@ -37,3 +37,14 @@ def test_projectile_dataset():
     # compute height
     height = 0.5 * (9.8) * (0.5 * t)**2
     assert abs(height - max_height) < EPS
+
+def test_random_dataset():
+    """test that the random dataset has the expected shape"""
+    n_samples = 100
+    input_size = 2
+    output_size = 3
+    x, y = random_dataset(n_samples, input_size, output_size)
+    assert x.shape[0] == n_samples
+    assert y.shape[0] == n_samples
+    assert x.shape[1] == input_size
+    assert y.shape[1] == output_size
